@@ -13,7 +13,7 @@
 // Console.Write("Y: ");
 // int secondCoordinateY = int.Parse(Console.ReadLine()!);
 
-// double result = Math.Sqrt(Math.Pow(firstCoordinateX-firstCoordinateY,2) + Math.Pow(secondCoordinateX - secondCoordinateY,2));
+// double result = Math.Sqrt(Math.Pow(secondCoordinateX - firstCoordinateX,2) + Math.Pow(secondCoordinateY - firstCoordinateY,2));
 
 // Console.WriteLine($"{result:f2}");
 
@@ -57,6 +57,9 @@
 // else Console.WriteLine("Введенное число ТИПО не счастливое!");
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 // Переменные для ДЗ
 int summLeftHalf,summRightHalf,number,temp;
 //Домашнее задание
@@ -70,7 +73,7 @@ do {
 } while (strNumber.Length != 5);
 number = int.Parse(strNumber);
 
-// Математическое решение(хоть я и не одуплил как можно формулой описать сравнение. Не смог отыскать закономерности)
+// Математическое решение(хоть я и не одуплил как можно формулой описать сравнение. Не смог отыскать закономерности. Так что это скорее числовое решение)
 Boolean flag = true;
 summRightHalf = summLeftHalf = 0;
 for (int i = 0; i < 5; i++) {
@@ -103,3 +106,27 @@ for (int i = 0, j = strNumber.Length - 1; i < strNumber.Length / 2; i++, j--)
 if (flag) Console.Write("Это палиндром");
 else Console.Write("Это не палиндром");
 Console.Write(" (String)");
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+Console.WriteLine(); Console.WriteLine();
+Console.WriteLine("Задача №21.");
+Console.WriteLine();
+
+Console.WriteLine("Введите координаты первой точки X, Y и Z:");
+Console.Write("X: ");
+int firstCoordinateX = int.Parse(Console.ReadLine()!);
+Console.Write("Y: ");
+int firstCoordinateY = int.Parse(Console.ReadLine()!);
+Console.Write("Z: ");
+int firstCoordinateZ = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите координаты второй точки X, Y и Z:");
+Console.Write("X: ");
+int secondCoordinateX = int.Parse(Console.ReadLine()!);
+Console.Write("Y: ");
+int secondCoordinateY = int.Parse(Console.ReadLine()!);
+Console.Write("Z: ");
+int secondCoordinateZ = int.Parse(Console.ReadLine()!);
+
+double result = Math.Sqrt(Math.Pow(secondCoordinateX - firstCoordinateX,2) + Math.Pow(secondCoordinateY - firstCoordinateY,2) + Math.Pow(secondCoordinateZ - firstCoordinateZ,2));
+
+Console.WriteLine($"{result:f2}");
