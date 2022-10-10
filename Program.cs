@@ -130,3 +130,15 @@ int secondCoordinateZ = int.Parse(Console.ReadLine()!);
 double result = Math.Sqrt(Math.Pow(secondCoordinateX - firstCoordinateX,2) + Math.Pow(secondCoordinateY - firstCoordinateY,2) + Math.Pow(secondCoordinateZ - firstCoordinateZ,2));
 
 Console.WriteLine($"{result:f2}");
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+Console.WriteLine(); Console.WriteLine();
+Console.WriteLine("Задача №23.");
+Console.WriteLine();
+
+Console.Write("Введите число N: ");
+int numberN = int.Parse(Console.ReadLine()!);
+for (int i = 1; i < numberN; i++) {
+        Console.Write(Math.Pow(i, 3) + ", ");
+}
+Console.WriteLine(Math.Pow(numberN, 3));
